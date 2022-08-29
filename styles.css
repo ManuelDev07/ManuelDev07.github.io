@@ -81,8 +81,8 @@ body{
 }
 
 #mail{
-    float: left;
-    writing-mode: vertical-lr;
+    float: right;
+    writing-mode: vertical-rl;    
     margin-top: 400%;
 }
 
@@ -148,6 +148,10 @@ body{
     padding-top: 18px;
     padding-left: 15px;
     padding-bottom: 18px;
+}
+
+#images-basics p:hover, #images-languages p:hover, #images-DB p:hover{
+    color:  rgba(6, 249, 119, 1);
 }
 
 #images{
