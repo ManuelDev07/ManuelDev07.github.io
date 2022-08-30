@@ -37,7 +37,7 @@ body{
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 28ch; 
+    width: 24ch; 
     animation: typing 5s steps(12),
     blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -148,6 +148,10 @@ body{
     padding-top: 18px;
     padding-left: 15px;
     padding-bottom: 18px;
+}
+
+#images-basics p, #images-languages p, #images-DB p{
+    font-weight: bold;
 }
 
 #images-basics p:hover, #images-languages p:hover, #images-DB p:hover{
