@@ -1,4 +1,5 @@
-*{
+/* General configs */
+* {
     margin: 0;
     padding: 0;
     user-select: none;
@@ -6,33 +7,40 @@
     scroll-behavior: smooth;
 }
 
-p{
+p {
     font-family: 'Roboto Mono', monospace;
     color:#8f99b8;
     font-size: 18px;
 }
 
-h2, h3{
+h2, h3 {
     font-family: 'Silkscreen', cursive;
-    font-size: 22px;    color: #ccd6f6;
+    font-size: 22px;
+    color: #ccd6f6;
     padding-top: 14px;
+    padding-bottom: 15px
 }
 
-h1{
+h1 {
     font-family: 'Silkscreen', cursive;
     color:#606a86;
 }
 
-a{
+a {
     font-family: 'Silkscreen', cursive;
     color:  rgba(6, 249, 119, 1);
 }
 
-body{
+body {
     background-color: #151e33;
 }
 
-/*Esta seccion es solo para el efecto de blink*/
+.general-box-sizes {
+    margin: 12px 15% 12px 5%;
+}
+/* END */
+
+/* Blink effect section */
 #hi {
     display: block;
     white-space: nowrap;
@@ -47,7 +55,7 @@ body{
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 9ch; 
+    width: 6.5ch; 
     animation: typing 5s steps(12),
     blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -57,7 +65,7 @@ body{
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 22ch; 
+    width: 8ch; 
     animation: typing 5s steps(12),
     blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -70,127 +78,135 @@ body{
 @keyframes blink {
     50% {border-color: transparent}
 }
-/* Fin de la seccion  */
+/* END */
 
-/*MENÚ IZQUIEROD*/
-#menu_lateral_izq{
-    padding-top: 25px;
-    padding-left: 2%;
+/* Right Menu */
+#menu_lateral_der {
     position: fixed;
-    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    padding: 10px;
 }
 
-#mail{
-    float: right;
-    writing-mode: vertical-rl;    
-    margin-top: 400%;
-}
-
-#menu_lateral_izq li{
+.lista ul {
     list-style: none;
-} 
-/**/
-
-/*MENÚ DERECHO*/
-#menu_lateral_der{
-    position: fixed;
-    margin-left: 89%;
-    margin-top: 35%;
-    font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 
-#menu_lateral_der li{
-    list-style: none;
-    padding: 5px;
+.lista li {
+    text-align: right;
+    margin-bottom: 10px;
 }
 
 #menu_lateral_der a:hover{
     text-decoration: underline;
 }
-/**/
 
-/*INTRO/SALUDO*/
+#menu_lateral_der div:first-child {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: end;
+}
+/* END */
+
+/* Intro Section */
 #intro{
-    margin: 12px 30% 12px 18%;
     padding: 13px 30px 0 8px;
     display: grid;
 }
 
 #intro-info{
     margin-right: 10%;
-}
-
-#intro-photo{
     grid-row: 1;
-    grid-column: 2;
-    border-radius: 9px;
-    box-sizing: content-box;
-    overflow: hidden;
-    margin-top: 50px;
-    height: 200px;
-    width: 150px;
-    box-shadow: 6px 13px 23px -5px rgb(0 0 0 / 46%);
-}
+    grid-column: 1;}
 
 #intro p{
     padding-top: 18px;
-    padding-left: 15px;
-}
-/**/
-
-/*HABILIDADES*/
-#skills{
-    margin: 12px 30% 12px 18%;
-    padding: 13px 30px 13px 8px;
 }
 
+#photo-box{
+    grid-row: 1;
+    grid-column: 2; 
+}
+
+#intro-photo{
+    border-radius: 100% ;
+    box-sizing: content-box;
+    overflow: hidden;
+    margin-top: 2rem;
+    height: 200px;
+    width: 200px;
+    box-shadow: 6px 13px 23px -5px rgb(0 0 0 / 46%);
+}
+
+#mail {
+    font-size: 13px;
+}
+
+#social-media-box{
+    grid-row: 2;
+    grid-column: 2;
+    margin: 1rem 0 0 4rem;
+}
+
+#social-media-box ul{
+    list-style: none;
+}
+
+#social-media-box ul li {
+    display: inline;
+    margin-right: 10px;
+}
+/* END */
+
+/* Skills Section */
 #skills p{
     padding-top: 18px;
     padding-left: 15px;
     padding-bottom: 18px;
 }
 
-#images-basics p, #images-languages p, #images-DB p{
-    font-weight: bold;
-}
-
-#images-basics p:hover, #images-languages p:hover, #images-DB p:hover{
-    color:  rgba(6, 249, 119, 1);
-}
-
 #images{
     display: grid;
     grid-gap: 22px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-#images img{
-    padding-right: 25px;
-}
-
-#images-basics{
-    grid-column: 1;
-    grid-row: 1;
+#images-box {
     text-align: center;
-    padding: 9px;
+    border-radius: 10px;
+    border: solid rgb(30 35 49) 1px;
+    padding: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.075);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#images-languages{
-    grid-column: 1;
-    grid-row: 2;
-    text-align: center;
-    padding: 12px;
+#images-box img {
+    margin-bottom: 10px;
 }
 
-#images-DB{
-    grid-column: 1;
-    grid-row: 3;
-    text-align: center;
-    padding: 9px;
+#images-box p:hover{
+    color:  rgba(6, 249, 119, 1);
+    font-weight: bold;
 }
-/**/
 
-/*PROYECTOS*/
-/*Carousel*/
+#images-box:hover {
+    background-color: rgba(6, 249, 119, 0.096);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.356);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border: solid rgba(6, 249, 119, 1) 1px;
+}
+/* END */
+
+/* Projects Section */
+/* Carousel */
 .container {
     flex-direction: column;
     justify-content: center;
@@ -198,7 +214,7 @@ body{
     margin: 50px 25%;
     width: auto;
     height: 300px;
-    box-shadow: 1px 1px 50px 1px black;
+    box-shadow: 1px 1px 25px 1px black;
     border:solid 3px rgba(6, 249, 119, 1);
     border-radius: 9px;
     overflow: hidden;
@@ -208,7 +224,7 @@ body{
 .main-heading {
     padding: 2rem 0 2rem 0;
 }
-  
+
 .content {
     background-color: #0e1422;
     position: relative;    
@@ -221,7 +237,7 @@ body{
     text-align: center;
     z-index: 50;
 }
-   
+
 .slideshow {
     height: auto;
     overflow: hidden;
@@ -236,7 +252,7 @@ body{
     position: relative;
     animation: slideshow 20s infinite;
 }
-  
+
 .slide {
     padding: 30px;
     width: 200%;
@@ -247,62 +263,62 @@ body{
     padding-left: 90%;
 }
 
-  
+
 @keyframes slideshow {
     0% {
         left: 0;
     }
-  
+
     10% {
         left: 0;
     }
-  
+
     15% {
         left: -100%;
     }
-  
+
     25% {
         left: -100%;
     }
-  
+
     30% {
         left: -200%;
     }
-  
+
     40% {
         left: -200%;
     }
-  
+
     45% {
         left: -300%;
     }
-  
+
     55% {
         left: -300%;
     }
-  
+
     60% {
         left: -200%;
     }
-  
+
     70% {
         left: -200%;
     }
-  
+
     75% {
         left: -100%;
     }
-  
+
     85% {
         left: -100%;
     }
-  
+
     90% {
         left: 0%;
     }
 }
-  
-    /* Botones/Buttons Carousel  */
+
+/* Carousel Buttons */
 .slide-btn {
     background-color: #151e33;
     border-radius: 50%;
@@ -322,15 +338,15 @@ body{
 .slide-btn-1 {
     left: 35%;
 }
-  
+
 .slide-btn-2 {
     left: 40%;
 }
-  
+
 .slide-btn-3 {
     left: 45%;
 }
-  
+
 .slide-btn-4 {
     left: 50%;
 }
@@ -338,7 +354,7 @@ body{
 .slide-btn-5 {
     left: 55%;
 }
-  
+
 .slide-btn-6 {
     left: 60%;
 }
@@ -347,12 +363,12 @@ body{
     animation: none;
     left: 0;
 }
-  
+
 .slide-btn-2:focus~.slideshow-wrapper {
     animation: none;
     left: -100%;
 }
-  
+
 .slide-btn-3:focus~.slideshow-wrapper {
     animation: none;
     left: -200%;
@@ -372,13 +388,13 @@ body{
     animation: none;
     left: -500%;
 }
-  
+
 .slide-btn:focus {
     background-color: rgba(6, 249, 119, 1);
 }
-/**/
+/* END */
 
-/*FOOTER*/
+/* Footer */
 footer{
     margin: 5px 25% 5px 25%;
     text-align: center;
@@ -388,9 +404,9 @@ footer{
 footer{
     font-size: 18px;
 }
-/**/
+/* END */
 
-/*SCROLLBAR*/
+/* Scrollbar */
 ::-webkit-scrollbar {
     background-color: #151e33;
     width: 10px;
@@ -414,4 +430,4 @@ footer{
 ::-webkit-scrollbar-thumb:hover{
     background-color: #2b3f66;
 }
-/**/
+/* END */
