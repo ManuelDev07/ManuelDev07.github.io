@@ -67,3 +67,35 @@ window.sr = ScrollReveal();
     origin: 'right',
     distance: '-100px'
   });
+
+// Clipboard (email)
+function copyToClipboard(text) {
+  var el = document.createElement('textarea');
+  el.value = text;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+
+  // Modal message
+  Swal.fire({
+    title: '¡Copied!',
+    icon: 'success',
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 1500,
+
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInRight
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__bounceOutRight
+      `
+    }
+  })
+}
